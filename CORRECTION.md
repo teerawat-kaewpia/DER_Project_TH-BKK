@@ -21,3 +21,11 @@ Results computed with V1.0.0 (the withdrawn Sustainable Cities and Society versi
 values. Main effects of the correction: equity weight 0.3325 → 0.3425, equity vs efficiency-only
 ρ −0.391 → −0.394, Zone 1 6 → 7 provinces (Narathiwat added), Chaiyaphum rank 7 → 62, Bangkok rank
 14 → 22.
+
+## Note added 2026-10-15: these are not the final results
+This repository stays the code record of the withdrawn Sustainable Cities and Society version, with only
+the C2 input corrected. A second defect is not corrected here: `rasterize_c2_poverty.py` clips and scales
+C2 at the 2nd and 98th percentiles before `compute_pai_province_level.py` clips and scales it again, so C2
+is clipped twice. The figures above come from that double-clipped pipeline. The final analysis, with both
+corrections (C2 clipped and scaled once), is in the separate repository for The Electricity Journal
+version. There Zone 1 again holds six provinces (Narathiwat in Zone 2) and the equity weight is 0.341.
